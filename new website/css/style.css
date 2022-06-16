@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap');
+:root {
+    --fristColor: #f55c47;
+    --secondeyColor: #9fe6a0;
+}
+
+body {
+    transition: 2s;
+    background-color: #000;
+}
+
+#container {
+    display: none;
+}
+
+
+/* start sign */
+
+.sign {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin: -90px 0 0 -175px;
+    z-index: 112;
+    width: 350px;
+    height: 180px;
+    padding: 20px;
+    background: var(--secondeyColor);
+    border-radius: 5px;
+}
+
+
+/* end sign */
+
+
+/* start arrow */
+
+.arrow2 {
+    position: fixed;
+    bottom: 30px;
+    left: -70px;
+    z-index: 2;
+    background-color: var(--fristColor);
+    color: #FFF;
+    width: 55px;
+    height: 55px;
+    font-size: 30px;
+    border: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: 0;
+    transition: 1s;
+}
+
+.arrow {
+    left: 30px;
+}
+
+.arrow:focus {
+    background-color: transparent;
+    color: rgb(0, 255, 98);
+}
+
+
+/* end arrow */
+
+
+/* start navbar */
+
+nav div div ul li {
+    margin: 5px;
+    padding: 0px 10px;
+    text-align: center;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition-delay: 1s;
+}
+
+nav div div ul li::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: var(--secondeyColor);
+    z-index: -1;
+    transition: .7s;
+}
+
+nav div div ul li:hover::before {
+    left: 0;
+}
+
+nav div div ul li:hover a {
+    color: #000 !important;
+}
+
+nav div div ul li a {
+    color: #FFF !important;
+    transition-delay: 1s;
+}
+
+.background {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/1.jpeg') no-repeat center center/cover;
+    height: 90vh;
+}
+
+nav div a.navbar-brand {
+    margin-top: 0 !important;
+    font-size: 30px!important;
+}
+
+.nw {
+    color: var(--fristColor);
+}
+
+.navfixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    animation: header .5s linear;
+}
+
+@keyframes header {
+    0% {
+        position: fixed;
+        top: -100px;
+    }
+    100% {
+        position: fixed;
+        top: 0px;
+    }
+}
+
+
+/* end navbar */
+
+
+/* start info */
+
+.info {
+    position: absolute;
+    width: 50%;
+    height: 250px;
+    left: 50%;
+    top: 50%;
+    margin: -125px 0 0 -25%;
+}
+
+.info h2 {
+    font-size: 60px;
+    font-family: sans-serif;
+    font-weight: 900;
+}
+
+.info p {
+    font-size: 20px;
+}
+
+@media (max-width:600px) {
+    .info h2 {
+        font-size: 40px;
+        font-family: sans-serif;
+        font-weight: 900;
+    }
+    .info p {
+        font-size: 18px;
+    }
+}
+
+
+/* end info */
+
+
+/* start why */
+
+.why {
+    padding: 40px 0;
+    background-color: #FFF;
+}
+
+.why i {
+    background-color: #f55c47;
+    color: #FFF;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border-radius: 50%;
+    transition: .6s;
+}
+
+.why i:hover {
+    transform: scale(1.1);
+    background-color: transparent;
+    color: #000;
+}
+
+
+/* end why */
+
+
+/* start who */
+
+.who .background-who {
+    background: url('../img/2.jpeg') no-repeat center center/cover;
+    height: auto;
+}
+
+.who div div div ul li {
+    width: fit-content;
+    border-bottom: 2px solid #FFF !important;
+    padding: 5px;
+}
+
+
+/* end who */
+
+
+/* start callus */
+
+.callus {
+    background-color: #FFF;
+}
+
+.callus .background-2 {
+    background: url('../img/3.jpeg') no-repeat center center/cover;
+    height: auto;
+    margin-bottom: 14px;
+}
+
+@media (max-width:995px) {
+    .who .background-who {
+        background: url('../img/2.jpeg') no-repeat center center/cover;
+        height: 500px;
+    }
+    .callus .background-2 {
+        background: url('../img/3.jpeg') no-repeat center center/cover;
+        height: 500px;
+        margin-bottom: 14px;
+    }
+    .info {
+        position: absolute;
+        width: 90%;
+        height: 250px;
+        left: 50%;
+        top: 50%;
+        margin: -125px 0 0 -45%;
+    }
+}
+
+
+/* end callus */

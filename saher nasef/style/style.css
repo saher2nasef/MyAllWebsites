@@ -1,0 +1,905 @@
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+ ::-webkit-scrollbar-track {
+    background-color: rgb(14, 13, 13);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 5px;
+    box-shadow: 10px 0 0 0 red;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+:root {
+    --firstColor: #310b0b;
+    --secondecolor: #eeb76b;
+    --saher: #e2703a;
+}
+
+
+/* start arrow */
+
+.left {
+    left: 30px !important;
+    transition: 1s;
+}
+
+#btn-top {
+    position: fixed;
+    bottom: 30px;
+    z-index: 100;
+    left: -100%;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(206, 38, 38);
+    color: #FFF;
+    border: 0;
+    border-radius: 50%;
+    font-size: 22px;
+    transition: 1s;
+}
+
+
+/* end arrow */
+
+
+/* start upper bar */
+
+.upper-bar {
+    background-color: var(--firstColor);
+    color: #FFF;
+}
+
+.row {
+    align-items: center;
+    padding: 5px;
+}
+
+@media (max-width:900px) {
+    .row div {
+        margin: 10px 0;
+    }
+}
+
+.upper-bar button {
+    background-color: var(--secondecolor);
+    margin: 0 10px;
+    padding: 5px 10px;
+    color: #FFF;
+    border: 1px solid var(--secondecolor);
+    text-transform: capitalize;
+    border-radius: 5px;
+}
+
+.upper-bar button:hover {
+    background-color: transparent;
+    border: 1px solid #dc3545;
+}
+
+.upper-bar span {
+    color: #bfc6c9;
+}
+
+
+/* end upper bar */
+
+
+/* start navbar */
+
+.navbar-brand img {
+    height: 50px;
+}
+
+#nav {
+    transition: all 1s;
+}
+
+nav div div ul li.toppp {
+    position: relative;
+}
+
+nav div div ul li.toppp a i {
+    transition: .8s;
+}
+
+nav div div ul li.toppp a:hover i {
+    transform: rotate(180deg);
+}
+
+nav div div ul li.toppp:hover ul {
+    display: block;
+}
+
+nav div div ul li.toppp ul {
+    position: fixed;
+    margin-top: 20px;
+    list-style: none;
+    background-color: red;
+    z-index: 2222;
+    padding: 20px;
+    display: none;
+}
+
+nav div div ul li.toppp ul::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border: 15px solid transparent;
+    top: -30px;
+    position: absolute;
+    border-bottom-color: #000;
+}
+
+nav div div ul li.toppp ul li a {
+    text-decoration: none;
+}
+
+.style {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    z-index: 111111111111111;
+    background-color: var(--secondecolor);
+    color: #FFF !important;
+    transition: all .5s;
+}
+
+nav div div ul .nav-item a {
+    font-size: 17px;
+    text-transform: capitalize;
+    color: var(--firstColor) !important;
+    font-weight: bold;
+}
+
+nav div div ul .nav-item:hover::before {
+    transform: translateX(-10%);
+}
+
+nav div div ul .nav-item::before {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: var(--saher)!important;
+    position: absolute;
+    margin: 0 5px;
+    transform: translateX(-110%);
+    bottom: 0;
+    transition: .5s;
+}
+
+nav div div ul .nav-item {
+    overflow: hidden;
+    position: relative;
+    margin: 10px 5px;
+}
+
+.navbar-nav .nav-item .active {
+    color: var(--saher)!important;
+}
+
+
+/* end navbar */
+
+
+/* strart  slider */
+
+.carousel-inner {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    background-size: cover;
+}
+
+#carouselExampleCaptions .carousel-inner .background-1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/1.jpg") no-repeat center center/cover;
+}
+
+#carouselExampleCaptions .carousel-inner .background-2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/2.jpg") no-repeat center center/cover;
+}
+
+#carouselExampleCaptions .carousel-inner .background-3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/3.jpg") no-repeat center center/cover;
+}
+
+.carousel-indicators button {
+    height: 20px !important;
+    width: 20px !important;
+    border-radius: 50%;
+    background-color: #000 !important;
+    border: 2px solid #fff !important;
+    outline: 0;
+}
+
+.carousel-inner {
+    display: flex;
+    align-items: center;
+}
+
+.carousel-inner .h-1 {
+    position: absolute;
+    z-index: 1;
+    color: #FFF;
+    width: 45%;
+    margin-left: 40px;
+    line-height: 1.6;
+    text-transform: capitalize;
+}
+
+@media (max-width:600px) {
+    .carousel-inner .h-1 {
+        width: 90%;
+    }
+}
+
+.carousel-inner .h-1 span {
+    background-color: var(--saher);
+    padding: 0 10px;
+    border-radius: 5px;
+}
+
+
+/* end  slider */
+
+
+/* start Our Features */
+
+.Features .containe .row div {
+    display: flex;
+    margin-top: 20px;
+}
+
+.Features {
+    padding: 100px 0;
+    background-color: var(--secondecolor);
+}
+
+.Features h1 {
+    color: var(--firstColor);
+    margin-bottom: 30px;
+}
+
+.Features i {
+    width: 70px;
+    height: 70px;
+    background-color: var(--firstColor);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: 50%;
+    margin-left: -35px;
+    margin-bottom: 10px;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 30px;
+    border: 1px solid var(--secondecolor);
+    transition: .5s;
+}
+
+.Features i:hover {
+    background-color: transparent;
+    border: 1px solid var(--secondecolor);
+    transform: rotate(360deg);
+}
+
+.Features h4 {
+    color: var(--firstColor);
+}
+
+.Features p {
+    color: var(--firstColor);
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+
+/* end Our Features */
+
+
+/* start Company Overview */
+
+.Company-Overview {
+    padding: 100px 0;
+    background-color: var(--firstColor);
+}
+
+.Company-Overview .row {
+    justify-content: center;
+}
+
+.Company-Overview h1 {
+    font-size: 40px;
+    color: var(--secondecolor);
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.Company-Overview p {
+    line-height: 1.8;
+    color: var(--secondecolor);
+    font-size: 20px;
+}
+
+.Company-Overview h4 {
+    letter-spacing: 5px;
+    font-size: 20px;
+    margin: 20px 0;
+    color: var(--secondecolor);
+}
+
+.Company-Overview button {
+    width: 200px;
+    padding: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 20px auto;
+    display: block;
+    color: var(--firstColor);
+    position: relative;
+    left: 50%;
+    margin-left: -100px;
+    border: 0;
+    text-transform: uppercase;
+    transition: .8s;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.Company-Overview button::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgb(58, 216, 40);
+    position: absolute;
+    left: -100%;
+    top: 0;
+    z-index: -1;
+    transition: .5s;
+}
+
+.Company-Overview button:hover::before {
+    left: 0;
+}
+
+.Company-Overview button:hover {
+    color: #000;
+}
+
+
+/* end Company Overview */
+
+
+/* start Features Work */
+
+.Features-Work {
+    padding: 100px 0 0 0;
+    background-color: var(--saher);
+}
+
+.Features-Work h1 {
+    font-size: 40px;
+    color: #000;
+    font-weight: bolder;
+}
+
+.Features-Work p {
+    margin: 30px auto;
+    width: 80%;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.Features-Work ul {
+    margin-top: 50px;
+}
+
+.Features-Work img {
+    width: 300px;
+}
+
+.btn-1 {
+    padding: 10px 0;
+    font-weight: bolder;
+    cursor: pointer;
+    text-align: center;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    margin: 5px 10px;
+    width: 90%;
+    background-color: transparent;
+    color: var(--firstColor);
+    border: 1px solid var(--firstColor);
+    position: relative;
+    text-transform: uppercase;
+    transition: .8s;
+    overflow: hidden;
+    z-index: 1;
+    letter-spacing: 3px;
+}
+
+.btn-1::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: var(--firstColor);
+    position: absolute;
+    left: -100%;
+    top: 0;
+    z-index: -1;
+    transition: .8s;
+}
+
+.btn-1:hover::before {
+    left: 0;
+}
+
+.Features-Work ul li.active {
+    background-color: var(--firstColor);
+    color: #FFF;
+}
+
+.btn-1:hover {
+    background-color: transparent;
+    color: #FFF;
+}
+
+.Features-Work .row {
+    margin: 0!important;
+    padding: 0 !important;
+}
+
+.Features-Work .parents-imgs {
+    margin-top: 50px !important;
+    -webkit-transform: all 1s ease-in-out;
+    -moz-transform: all 1s ease-in-out;
+    -ms-transform: all 1s ease-in-out;
+    -o-transform: all 1s ease-in-out;
+    transform: all 1s ease-in-out;
+}
+
+.Features-Work .parents-imgs .row {
+    margin: 0;
+    transition: all 1s ease-in-out;
+}
+
+.Features-Work .parents-imgs .row .col-md {
+    margin: 0;
+    padding: 0 !important;
+}
+
+.Features-Work .row img {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* end Features Work */
+
+
+/* start Latest Posts */
+
+.Latest-Posts {
+    padding: 100px 0;
+    background-color: var(--firstColor);
+}
+
+.Latest-Posts h1 {
+    color: #FFF;
+}
+
+.Latest-Posts p {
+    color: #FFF;
+    margin-top: 20px;
+    width: 80%;
+}
+
+.Latest-Posts .card {
+    margin: 20px 0;
+    background-color: #FFF;
+    padding: 10px;
+}
+
+.Latest-Posts .card div p {
+    color: var(--firstColor) !important;
+    margin: 0 !important;
+    width: 100%;
+    line-height: 1.5;
+}
+
+.Latest-Posts .card div .card-subtitle {
+    color: var(--firstColor) !important;
+}
+
+.Latest-Posts .card div a {
+    padding: 5px 10px;
+    margin: 10px 0 -15px 0;
+    background-color: var(--secondecolor);
+    display: block;
+    width: 100px;
+    text-align: center;
+    color: #000!important;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transition: 1s;
+    border-radius: 5px;
+}
+
+.Latest-Posts .card div a::before {
+    content: '';
+    background-color: var(--firstColor);
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    transition: 1s;
+    border-radius: 5px;
+}
+
+.Latest-Posts .card div a:hover {
+    color: #FFF !important;
+}
+
+.Latest-Posts .card div a:hover::before {
+    left: 0;
+    transition: 1s;
+}
+
+
+/* end Latest Posts */
+
+
+/* start Testimonials */
+
+.Testimonials .carousel-inner {
+    position: relative;
+}
+
+#carouselExampleDark i {
+    color: #FFF;
+    font-size: 35px;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+#carouselExampleDark i.red {
+    background-color: red;
+}
+
+#carouselExampleDark i.black {
+    background-color: rgb(255, 255, 255);
+    color: #000;
+}
+
+#carouselExampleDark .carousel-inner .bg-1 {
+    background: url("../img/slider01.jpeg") no-repeat center center/cover;
+}
+
+#carouselExampleDark .carousel-inner .bg-2 {
+    background: url("../img/slider02.jpeg") no-repeat center center/cover;
+}
+
+#carouselExampleDark .carousel-inner .bg-3 {
+    background: url("../img/slider03.jpeg") no-repeat center center/cover;
+}
+
+#carouselExampleDark .carousel-inner .dark {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.582);
+    width: 100%;
+    height: 100%;
+}
+
+.position {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -25%;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    height: 50%;
+    width: 50%;
+    color: #FFF !important;
+}
+
+.position .info {
+    margin-bottom: 20px;
+}
+
+.position .info img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.position .info p {
+    margin-bottom: 0 !important;
+    text-transform: capitalize;
+    word-spacing: 5px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+
+/* end Testimonials */
+
+
+/* start Pricing-Table */
+
+.Pricing-Table {
+    padding: 100px 0;
+    background-color: var(--secondecolor);
+}
+
+.Pricing-Table h1 {
+    font-size: 40px;
+    color: #000;
+    font-weight: bolder;
+}
+
+.Pricing-Table p {
+    margin: 30px auto;
+    width: 80%;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.Pricing-Table .container .card-body ul li {
+    margin: 10px 0;
+}
+
+.Pricing-Table .card .Corporate button {
+    background-color: red;
+    color: #FFF;
+}
+
+.Pricing-Table .card {
+    margin-top: 40px;
+}
+
+.Pricing-Table .top {
+    position: relative;
+    top: -20px;
+}
+
+@media (max-width:1190px) {
+    .Pricing-Table .top {
+        top: 0;
+    }
+}
+
+
+/* end Pricing-Table */
+
+
+/* start Why-Choose-Us */
+
+.Why-Choose-Us .container-fluid {
+    padding: 15px!important;
+}
+
+.Why-Choose-Us .row {
+    margin: 0;
+    padding: 0;
+}
+
+.Why-Choose-Us .row .img {
+    background: url("../img/slider01.jpeg") no-repeat center center/cover;
+    height: 580px !important;
+}
+
+.Why-Choose-Us .row div {
+    background-color: var(--firstColor);
+    padding: 104.5px 40px 0;
+    color: #FFF !important;
+    height: 580px !important;
+}
+
+@media (max-width:700px) {
+    .Why-Choose-Us .row div {
+        padding: 20px 40px 20px;
+        height: auto !important;
+    }
+}
+
+.Why-Choose-Us .row div p {
+    width: 90%;
+    margin-bottom: 30px;
+}
+
+.Why-Choose-Us .row div button {
+    background-color: red;
+    color: #FFF;
+    padding: 5px 10px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    transition: .5s;
+}
+
+.Why-Choose-Us .row div button:hover {
+    background-color: transparent;
+    border: 1px solid red;
+}
+
+.Why-Choose-Us .row div {
+    margin-bottom: 0;
+}
+
+
+/* end Why-Choose-Us */
+
+
+/* start Statistics */
+
+.Statistics .container .row .text-center {
+    margin: 70px 0;
+}
+
+.Statistics .container .row .text-center i {
+    font-size: 55px;
+}
+
+@media (max-width:700px) {
+    .Statistics .container .row .text-center {
+        margin: 20px 0;
+    }
+}
+
+.Statistics .container .row .text-center span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.Statistics .row {
+    margin: 0;
+    padding: 0;
+}
+
+.Statistics .c0ol {
+    background-color: var(--firstColor);
+    color: #FFF;
+    padding: 70px 70px;
+    margin: 0;
+}
+
+.Statistics .c0ol p {
+    display: inline-block;
+    font-size: 25px;
+    font-weight: lighter;
+    margin: 3px 0;
+}
+
+.Statistics .c0ol button {
+    background-color: red;
+    color: #FFF;
+    padding: 5px 10px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border: 1px solid transparent;
+    transition: .5s;
+}
+
+.Statistics .c0ol button:hover {
+    background-color: transparent;
+    border: 1px solid red;
+}
+
+
+/* end Statistics */
+
+
+/* start Contact-Us */
+
+.Contact-Us {
+    background-color: var(--firstColor);
+    color: #FFF;
+    padding: 60px 0;
+    margin: 0;
+}
+
+.Contact-Us .row p {
+    display: inline-block;
+    font-size: 25px;
+    font-weight: lighter;
+    margin: 3px 0;
+}
+
+.Contact-Us .row button {
+    background-color: transparent;
+    font-weight: bold;
+    color: #FFF;
+    padding: 5px 20px;
+    font-size: 20px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border: 1px solid red;
+    transition: .5s;
+}
+
+.Contact-Us .row button:hover {
+    background-color: red;
+    border: 1px solid transparent;
+}
+
+
+/* end Contact-Us */
+
+
+/* start footer */
+
+.footer {
+    padding: 80px 0;
+}
+
+.footer .container .row .d-inline-block li {
+    transition: .8s;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.footer .container .row div {
+    margin: 20px 0;
+}
+
+.footer .container .row .d-inline-block li:hover {
+    transform: translateX(40px);
+}
+
+.coopying div div div i {
+    padding: 13px 0;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--firstColor);
+    color: #FFF;
+    opacity: .9;
+    transition: .5s;
+    cursor: pointer;
+    border: 1px solid var(--firstColor);
+}
+
+@media (max-width:900px) {
+    .coopying div div div i {
+        margin: 10px 0;
+    }
+}
+
+.coopying div div div i:hover {
+    opacity: 1;
+    background-color: #EEE;
+    color: #000;
+    border: 1px solid rgb(226, 226, 226);
+}
+
+
+/* end footer */

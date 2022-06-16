@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 92vh;
+}
+
+.math select,
+.math input {
+  outline: 0;
+  padding: 10px;
+  border: 0;
+  background: #e91e63;
+  color: #fff;
+  border-radius: 9px;
+  border-bottom: 2px solid #fff;
+}
+
+.math input {
+  outline: 0;
+  padding: 11px 10px;
+  border: 0;
+  background: #e91e63;
+  color: #fff;
+  border-radius: 9px;
+  border-bottom: 2px solid #fff;
+}
+
+.math input::placeholder {
+  color: #fff;
+}

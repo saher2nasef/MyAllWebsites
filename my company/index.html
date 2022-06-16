@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>PSN Company</title>
+    <script src="https://kit.fontawesome.com/80bc8a1395.js"></script>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/normallis.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <!-- starts header -->
+
+        <header>
+            <img src="./images/logo/logo2.svg" alt="logo" class="logo" />
+            <ul>
+                <li>
+                    <a href="#home">home</a>
+                </li>
+                <li>
+                    <a href="#Services">Services</a>
+                </li>
+                <li class="sign-in">sign in</li>
+            </ul>
+            <button class="toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        </header>
+
+        <!-- ends header -->
+
+        <!-- starts background -->
+        <div class="background-2"></div>
+        <!-- ends background -->
+
+        <!-- starts welcome -->
+        <div class="input">
+            <input type="text" placeholder="Please Enter Your Name" />
+            <button>sign in</button>
+        </div>
+        <section class="welcome section" id="home">
+            <h1>Welcome, <span id="welcome"></span></h1>
+            <p>
+                to the PSN Company website. The company a makes desktop app and website app, look sign in the name just try
+            </p>
+        </section>
+        <!-- ends welcome -->
+
+        <!-- starts Services -->
+        <section class="Services section" id="Services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 mb-5">
+                        <h1 class="mainLogo" data-aos="zoom-in-down">Services</h1>
+                    </div>
+                    <div class="
+                col-12
+                d-flex
+                align-items-center
+                justify-content-center
+                flex-wrap
+              ">
+                        <div class="cart" data-aos="zoom-in">
+                            <div class="card-img back1"></div>
+                            <div class="card-text">
+                                <h2>Web App</h2>
+                                <p>
+                                    this web is very good for your Because you saved a lot of time to search, this site is the perfect solution
+                                </p>
+                                <a href="pages/webApp.html">go to contact</a>
+                            </div>
+                        </div>
+                        <div class="cart" data-aos="zoom-in">
+                            <div class="card-img back2"></div>
+                            <div class="card-text">
+                                <h2>desktop App</h2>
+                                <p>
+                                    this web is very good for your Because you saved a lot of time to search, this site is the perfect solution
+                                </p>
+                                <a href="pages/desktopApp.html">go to contact</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ends Services -->
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/aos.js"></script>
+    <script>
+        AOS.init({
+            offeset: 600,
+            duration: 1000,
+        });
+    </script>
+</body>
+
+</html>

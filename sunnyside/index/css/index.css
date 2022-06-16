@@ -1,0 +1,573 @@
+/* start loading */
+
+.loading {
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(204, 0, 255);
+    margin: auto;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+.loading>div {
+    width: 100px;
+    height: 100px;
+    background-color: #FFF;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: loading1 2s linear infinite;
+}
+
+.loading>div>div {
+    width: 70%;
+    height: 70%;
+    background-color: rgb(246, 169, 169);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: loading2 2s linear infinite;
+}
+
+.loading>div>div>div {
+    width: 70%;
+    height: 70%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: loading3 2s linear infinite;
+}
+
+@keyframes loading1 {
+    0% {
+        transform: scale(.5);
+    }
+    25% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(.5);
+    }
+    75% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(.5);
+    }
+}
+
+@keyframes loading2 {
+    0% {
+        transform: scale(.5);
+    }
+    25% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(.5);
+    }
+    75% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(.5);
+    }
+}
+
+@keyframes loading3 {
+    0% {
+        transform: scale(.5);
+    }
+    25% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(.5);
+    }
+    75% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(.5);
+    }
+}
+
+
+/* end loading */
+
+
+/* start navbar_top */
+
+.navbar_top {
+    background-image: url("../images/desktop/image-header.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 70vh;
+}
+
+.navbar {
+    padding: 30px 30px !important;
+}
+
+.navbar .ulNavbar {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar .ulNavbar li {
+    margin: 0 6px;
+}
+
+.navbar .ulNavbar li a {
+    text-decoration: none;
+    color: #FFF;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 18px;
+}
+
+.navbar .ulNavbar li a:hover {
+    background: #6fcfff;
+}
+
+.toggleShow {
+    width: 50px;
+    height: 43px;
+    padding: 0 6px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    display: none;
+}
+
+.toggleShow span {
+    display: block;
+    height: 3px;
+    margin: 7px 0;
+    transition: .7s;
+    background-color: #FFF;
+}
+
+.toggleShow span:nth-child(2) {
+    width: 100%;
+    transition: .5s;
+}
+
+.toggleShow.active span:nth-child(2) {
+    opacity: 0;
+    z-index: -1;
+    position: absolute;
+    display: none;
+}
+
+.toggleShow.active span:first-child {
+    width: 100%;
+    transform: rotate( 45deg) translate(4px, 5px);
+}
+
+.toggleShow.active span:last-child {
+    transform: rotate( -45deg) translate(1px, -4px);
+    width: 100%;
+}
+
+.navbar_top .other2 h1 {
+    width: fit-content;
+    margin: auto;
+    margin-top: 50px;
+    font-size: 59px;
+    color: #FFF;
+    text-align: center;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.navbar_top .other2 img {
+    margin: auto;
+    display: block;
+    margin-top: 50px;
+}
+
+
+/* end navbar_top */
+
+
+/* start images */
+
+.images {
+    overflow: hidden;
+}
+
+.images img {
+    width: 100%;
+    height: 100%;
+}
+
+.images .text {
+    padding-left: 80px;
+    padding-right: 70px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100%;
+    flex-direction: column;
+    text-align: left;
+    margin: 20px 0 40px;
+}
+
+.images .text h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.images .text p {
+    font-size: 15.5px;
+    margin-bottom: 30px;
+}
+
+.images .text button {
+    background-color: transparent;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    color: #000;
+    transition: .4s;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+.images .text button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    z-index: -1;
+    transition: .4s;
+}
+
+.images .text button:hover {
+    color: #FFF;
+}
+
+.images .text button:hover::before {
+    left: 0;
+}
+
+.images .otherSrtanger {
+    position: relative;
+    right: -10px;
+}
+
+.images .backgound-1 {
+    background-image: url("../images/desktop/image-graphic-design.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60vh;
+    position: relative;
+    right: -10px;
+}
+
+.images .backgound-2 {
+    background-image: url("../images/desktop/image-photography.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 60vh;
+    position: relative;
+    right: -10px;
+}
+
+.images .backgound-1,
+.images .backgound-2 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    position: relative;
+}
+
+.images .backgound-1>div,
+.images .backgound-2>div {
+    position: absolute;
+    width: 350px;
+    bottom: 50px;
+}
+
+
+/* end images */
+
+
+/* start testimonials */
+
+.testimonials {
+    padding: 100px 0;
+}
+
+.testimonials h2 {
+    font-weight: 600;
+    text-align: center;
+    color: #a9aaac;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.testimonials .card-small {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.testimonials .card-small img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+
+.testimonials .card-small p {
+    text-align: center;
+    font-size: 15px;
+    color: #818183;
+    margin: 70px 0;
+}
+
+.testimonials .card-small>div h3 {
+    text-align: center;
+    width: 100%;
+    font-size: 22px;
+}
+
+.testimonials .card-small>div span {
+    text-align: center;
+    width: 100%;
+    color: #818183;
+}
+
+
+/* end testimonials */
+
+
+/* start footer */
+
+footer {
+    overflow: hidden;
+    background: #90d4c5;
+}
+
+footer img {
+    width: 100%;
+}
+
+footer h1 {
+    color: #2c7363;
+    font-weight: 900;
+    transition: .4s;
+}
+
+footer ul {
+    padding: 0;
+    margin: 10px 0 50px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer ul li {
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: #4f9384;
+    text-decoration: none;
+    font-size: 20px;
+    transition: .4s;
+    font-weight: 600;
+    transition: .4s;
+}
+
+footer .hover1 {
+    transition: .4s;
+    width: 1px;
+    height: 1px;
+    background-color: #009688;
+    margin: auto;
+    border-radius: 50%;
+}
+
+footer .hover {
+    overflow: hidden;
+}
+
+footer .hover:hover h1,
+footer .hover:hover ul li a {
+    color: #FFF !important;
+}
+
+footer .hover:hover ul li a:hover {
+    color: rgb(208, 255, 0) !important;
+}
+
+footer .hover:hover .hover1 {
+    box-shadow: 0 0 0 1000px #009688;
+    height: 50px;
+    width: 50px;
+}
+
+footer .media i {
+    font-size: 20px;
+    margin: 0 5px;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFF;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+footer .media i:hover {
+    background-color: rgb(0, 255, 0);
+    color: #000;
+    box-shadow: 0 0 20px 2px #FFF;
+}
+
+
+/*  end footer*/
+
+@media (max-width:650px) {
+    .toggleShow {
+        display: block;
+    }
+    .navbar .ulNavbar {
+        position: absolute;
+        top: 100px;
+        flex-direction: column;
+        text-align: center;
+        width: 80%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #FFF;
+        padding: 20px;
+        display: none;
+    }
+    .navbar .ulNavbar.active {
+        display: flex;
+    }
+    .navbar .ulNavbar .other {
+        position: relative;
+        width: 100%;
+    }
+    .navbar .ulNavbar .other::before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        top: -39px;
+        border-width: 10px;
+        border-color: transparent #FFF #FFF transparent;
+        border-style: solid;
+        right: -20px;
+        background-color: transparent;
+    }
+    .navbar .ulNavbar li {
+        margin: 8px 0;
+    }
+    .navbar .ulNavbar li a {
+        color: #9694a0;
+    }
+    .navbar .ulNavbar li a:hover {
+        background: #fbd600;
+        color: #000;
+    }
+    .navbar_top .other2 h1 {
+        margin-top: 20px !important;
+    }
+    .navbar_top .other2 img {
+        margin-top: 15px;
+    }
+    .images .text {
+        padding: 0 20px;
+    }
+    footer>div>div>.p-0 {
+        width: calc(100% / 2);
+    }
+    .images .text {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .testimonials .card-small {
+        margin: 30px 0;
+    }
+    .testimonials .card-small p {
+        margin: 20px 0;
+    }
+    .testimonials h2 {
+        font-weight: 900;
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+}
+
+@media (max-width:400px) {
+    footer .images>div {
+        height: 170px;
+    }
+}
+
+@media (max-width:350px) {
+    .navbar .ulNavbar {
+        width: 70%;
+    }
+}
+
+@media(min-width:1200px) {
+    footer .hover .hover1 {
+        transition: 1s;
+    }
+    footer .hover:hover .hover1 {
+        box-shadow: 0 0 0 2000px #009688;
+        height: 50px;
+        width: 50px;
+    }
+    * {
+        font-size: 20px !important;
+    }
+}
+
+@media(min-width:1500px) {
+    footer .hover .hover1 {
+        transition: 1s;
+    }
+    footer .hover:hover .hover1 {
+        box-shadow: 0 0 0 2000px #009688;
+        height: 50px;
+        width: 50px;
+    }
+    .images .text h2 {
+        font-size: 35px !important;
+    }
+    .images .text p {
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,678 @@
+@import url('https://fonts.googleapis.com/css2?family=Changa:wght@500&display=swap');
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+ ::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 5px;
+}
+
+body {
+    background-color: var(--mainBacground);
+    scroll-behavior: smooth;
+    height: 300vh;
+}
+
+:root {
+    --mainwidth: 82%;
+    /* 
+    
+    
+    
+    
+    
+    
+    */
+    --mainBacground: #18191A;
+    --seconderyBacground: rgb(41, 41, 41);
+    --threeBacground: #18191A;
+    --mainColor: #FFF;
+    --seconseryColor: #FFF;
+    --threeColor: rgb(92, 92, 92);
+}
+
+
+/* start navbar */
+
+nav {
+    width: 100%;
+    z-index: 20000;
+    background-color: var(--seconderyBacground);
+}
+
+nav ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    font-size: 23px;
+}
+
+nav ul.ul-1 li {
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--threeColor);
+    transition: .2s;
+}
+
+nav ul.ul-1 li:hover {
+    background-color: var(--mainBacground);
+}
+
+nav ul {
+    margin: 0;
+    color: var(--mainColor);
+}
+
+nav ul.ul-2 li.active {
+    border-bottom: 2px solid #00f;
+    background-color: transparent !important;
+    border-radius: 0 !important;
+}
+
+nav ul.ul-2 li {
+    width: 90px;
+    height: 50px;
+    cursor: pointer;
+    margin-bottom: -5px;
+    margin-top: -5px;
+}
+
+nav ul.ul-2 li:hover {
+    border-radius: 5px;
+    background-color: var( --threeColor);
+}
+
+nav ul.ul-3 li {
+    margin: 0 15px;
+}
+
+nav ul.ul-3 li i[class="fa fa-facebook-official"] {
+    font-size: 40px;
+    background: var(--mainColor);
+    border-radius: 50%;
+    color: #2c57b6;
+    border: 0;
+    margin: 0;
+}
+
+
+/* end navbar */
+
+
+/* start body */
+
+
+/* start Birthdays */
+
+
+/* end Birthdays */
+
+.height {
+    height: 90vh;
+    position: fixed;
+    top: 60px;
+    width: 300px;
+    left: 0;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    text-align: right;
+    color: var(--mainColor);
+}
+
+.height .Birthdays {
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+    border-bottom: 2px solid var(--mainColor);
+}
+
+.height .Birthdays h5 {
+    font-family: 'Changa', sans-serif;
+    color: rgb(112, 112, 112);
+    font-size: 25px;
+}
+
+.height .callus h5 {
+    font-family: 'Changa', sans-serif;
+    color: rgb(112, 112, 112);
+    font-size: 18px;
+}
+
+.height .callus i {
+    display: inline-flex;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.height .callus i:hover {
+    cursor: pointer;
+    background-color: #3A3B3C;
+}
+
+.height .personal {
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid var(--mainColor);
+}
+
+.height .personal div {
+    margin: 10px 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.height .personal div:hover {
+    background-color: #3A3B3C;
+}
+
+.height .personal div img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.height .personal div span {
+    font-size: 17px;
+    font-family: 'Changa', sans-serif;
+    margin-right: 10px;
+}
+
+.height .video h5 {
+    font-family: 'Changa', sans-serif;
+    color: rgb(112, 112, 112);
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.height .video p {
+    margin-bottom: 0;
+}
+
+.height .video i {
+    width: 35px;
+    height: 35px;
+    background-color: #3A3B3C;
+    margin-left: 10px;
+}
+
+
+/* start img-random */
+
+.body .img-random {
+    width: 100%;
+    height: 200px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.body .img-random div {
+    width: 115px;
+    margin-left: 6px;
+    border-radius: 5px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    transition: .6s;
+}
+
+.body .img-random div:hover {
+    transform: scale(1.2) translateY(10px);
+    box-shadow: 0 0 1px 200000px var(--mainBacground);
+    z-index: 111;
+}
+
+.body .img-random div img {
+    width: 50px;
+    border-radius: 50%;
+    height: 50px;
+    margin: 5px;
+    border: 1px solid var(--mainColor);
+}
+
+.body .img-random div p {
+    color: var(--seconseryColor);
+    font-size: 20px;
+    text-align: end;
+    margin-bottom: 0;
+    margin-right: 4px;
+}
+
+.body .img-random div.img-child1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/1.jpg") no-repeat center/cover !important;
+}
+
+.body .img-random div.img-child2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/2.jpg") no-repeat center/cover !important;
+}
+
+.body .img-random div.img-child3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/3.jpg") no-repeat center/cover !important;
+}
+
+.body .img-random div.img-child4 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/4.jpg") no-repeat center/cover !important;
+}
+
+.body .img-random div.img-child5 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/5.jpg") no-repeat center/cover !important;
+}
+
+
+/* end img-random */
+
+
+/* start your-post */
+
+.body .your-post {
+    padding: 8px;
+    background-color: var(--seconderyBacground);
+    width: var(--mainwidth);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.body .your-post .input {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0 10px 10px;
+    align-items: center;
+    border-bottom: 2px solid rgb(68, 68, 68);
+}
+
+.body .your-post .input img {
+    width: 55px;
+    height: 55px;
+    border-radius: 50px;
+    margin-left: 10px;
+}
+
+.body .your-post .input input {
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    padding: 0 20px;
+    direction: rtl;
+    background-color: var(--threeBacground);
+    color: var(--mainColor);
+}
+
+.body .your-post .input input::placeholder {
+    color: var(--mainColor);
+}
+
+.body .your-post .anther {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+.body .your-post .anther button {
+    padding: 8px 20px;
+    border: 0;
+    color: var(--mainColor);
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: .3s;
+}
+
+.body .your-post .anther button:hover {
+    background-color: #3A3B3C;
+}
+
+.body .your-post .anther button i {
+    margin-left: 10px;
+    font-size: 25px;
+    color: chartreuse;
+}
+
+.body .your-post .anther button:last-child i {
+    color: rgb(243, 71, 71);
+}
+
+
+/* end your-post */
+
+.body .rooms {
+    padding: 8px;
+    background-color: var(--seconderyBacground);
+    width: var(--mainwidth);
+    display: flex;
+    margin: 10px 0;
+    justify-content: space-between;
+    border-radius: 5px;
+    align-items: center;
+    position: relative;
+}
+
+.body .rooms button {
+    border-radius: 20px;
+}
+
+.body .rooms div {
+    width: 75%;
+    height: 50px;
+    overflow: hidden;
+    display: flex;
+    direction: rtl;
+}
+
+.body .rooms div img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: 1s;
+}
+
+
+/* end body */
+
+
+/* start post */
+
+.post {
+    background-color: var(--seconderyBacground);
+    width: var(--mainwidth);
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    justify-content: space-between;
+    border-radius: 5px;
+    align-items: center;
+    position: relative;
+    color: var(--mainColor);
+}
+
+.post .info-post {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+}
+
+.post .info-post div.img {
+    width: 50px;
+    height: 50px;
+    margin-left: 10px;
+}
+
+.post .info-post div.img img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.post .info-post div.img+div {
+    display: flex;
+    flex-direction: column;
+}
+
+.post .info-post div.img+div p {
+    margin-bottom: 0;
+}
+
+.post .info-post div.img+div span small.before {
+    position: relative;
+    margin-right: 10px;
+}
+
+.post .info-post div.img+div span small.before::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    top: 7px;
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+    left: 18px;
+}
+
+.post .post-main {
+    width: 100%;
+}
+
+.post .post-main p {
+    padding: 0 10px;
+}
+
+.post .post-main img.main {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.post .post-main .like {
+    display: flex;
+    padding: 0 0 10px;
+    border-bottom: 1px solid rgb(68, 68, 68);
+    width: 95%;
+    justify-content: center;
+    margin: auto;
+}
+
+.post .post-main .like div {
+    width: 87%;
+}
+
+.post .post-main .like div .theliked {
+    padding: 0 10px;
+}
+
+.post .post-main .like span {
+    width: 13%;
+    text-align: end;
+}
+
+.post .post-main .like .j1lvzwm4 {
+    transition: .5s;
+}
+
+.post .post-main .like .j1lvzwm4:hover {
+    transform: scale(1.5);
+}
+
+.social-media {
+    display: flex;
+    justify-content: space-around;
+    width: 95%;
+    margin: 5px 0;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(68, 68, 68);
+}
+
+.social-media button {
+    width: calc(90%/3);
+    padding: 5px 20px;
+    border: 0;
+    color: var(--mainColor);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: .3s;
+}
+
+.social-media button:hover {
+    background-color: #3A3B3C;
+}
+
+.social-media button i {
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+.post .commints {
+    width: 100%;
+    padding: 10px;
+}
+
+.post .commints .commint {
+    display: flex;
+    width: 90%;
+    padding: 0 10px;
+    margin-bottom: 10px;
+}
+
+.post .commints .commint img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.post .commints .commint .this-commint {
+    padding: 10px;
+    background-color: var(--threeBacground);
+    border-radius: 20px;
+}
+
+.post .commints .commint .this-commint p {
+    margin-bottom: 0;
+}
+
+.post .commints p.out {
+    margin: 10px 50px;
+}
+
+.post .commints a {
+    text-decoration: none;
+    color: var(--mainColor);
+    padding: 10px;
+}
+
+.post .your-commint-post {
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.post .your-commint-post .input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.post .your-commint-post .input textarea {
+    resize: none;
+    outline: 0;
+    width: 100%;
+    height: 33px;
+    border-radius: 27px;
+    background-color: var(--threeBacground);
+    border: 0;
+    color: var(--mainColor);
+    padding: 4px 20px 4px;
+}
+
+.post .your-commint-post .input div {
+    position: absolute;
+    z-index: 1;
+    color: var(--mainColor);
+    left: 10px;
+    background-color: var(--threeBacground);
+    padding: 0 10px;
+    bottom: 5px;
+}
+
+
+/* end post */
+
+@media (max-width:992px) {
+     :root {
+        --mainwidth: 70%;
+    }
+    .body .img-random {
+        width: 100%;
+        height: 219px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .body .img-random div:last-child {
+        display: none;
+    }
+    .body .img-random div {
+        width: 115px;
+        margin-top: 10px;
+        margin-left: 6px;
+        border-radius: 5px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+    }
+}
+
+@media (max-width:768px) {
+     :root {
+        --mainwidth: 80%;
+    }
+    .body .your-post .anther {
+        flex-direction: column;
+    }
+    .body .your-post .anther button {
+        justify-content: center;
+    }
+    .body .rooms button {
+        width: 180px;
+    }
+}
+
+@media (max-width:576px) {
+     :root {
+        --mainwidth: 100%;
+    }
+    .body .img-random {
+        width: 100%;
+        height: 219px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .post .post-main .like {
+        flex-direction: column;
+    }
+    .post .post-main .like div,
+    .post .post-main .like span {
+        width: 100%;
+        text-align: right;
+        margin-top: 10px;
+    }
+    .body .img-random div:nth-child(3) {
+        display: none;
+    }
+}

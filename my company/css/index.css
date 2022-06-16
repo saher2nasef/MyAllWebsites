@@ -1,0 +1,458 @@
+/* color list */
+
+
+/*
+1-c
+2-185ADB
+3-FFC947
+4-c
+*/
+
+:root {
+    --co: #0a1931;
+    --ct: #185adb;
+    --cth: #efefef;
+    --cfo: #ffffff;
+}
+
+body {
+    background-color: var(--co);
+}
+
+
+/* starts header */
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 5px;
+    position: fixed;
+    width: 100%;
+    top: 20px;
+    left: 0;
+    z-index: 3;
+    transition: 0.4s;
+}
+
+header.Active {
+    background-color: var(--ct) !important;
+    top: 0;
+}
+
+header .logo {
+    width: 268px;
+    height: 77px;
+    background-color: transparent;
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li {
+    margin: 2px;
+    font-size: 20px;
+    transition: 0.4s;
+    padding: 8px 20px;
+    border-radius: 50px;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+header ul li:hover,
+header ul li.active {
+    background-color: var(--cfo);
+    cursor: pointer;
+    color: #000;
+}
+
+header ul li.active a {
+    color: var(--co) !important;
+}
+
+header ul li i {
+    color: var(--cfo);
+}
+
+header ul li:hover i {
+    color: var(--co);
+    cursor: pointer;
+}
+
+header ul li:active {
+    animation: big 0.5s linear infinite;
+}
+
+@keyframes big {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+header ul li:hover a {
+    color: var(--co) !important;
+}
+
+header ul li a {
+    text-decoration: none;
+    text-transform: capitalize;
+    color: var(--cfo) !important;
+}
+
+header .toggle {
+    display: none;
+}
+
+@media (max-width: 900px) {
+    header ul {
+        flex-direction: column;
+        position: fixed;
+        right: -100%;
+        background-color: #000;
+        align-items: center;
+        justify-content: center;
+        z-index: 5;
+        opacity: 1;
+        transition: 0.5s;
+        height: 100vh;
+        top: 0;
+        width: 300px;
+    }
+    header ul.active {
+        right: 0;
+    }
+    header ul li {
+        text-align: center;
+        padding: 8px 40px !important;
+    }
+    header button {
+        display: block !important;
+        height: 40px;
+        width: 45px;
+        border: 0;
+        background: transparent;
+        transition: 0.3s;
+        position: relative;
+        outline: 0;
+        z-index: 201;
+    }
+    header button span {
+        width: 100%;
+        display: block;
+        height: 4px;
+        margin: 7px 0;
+        background: white;
+        transition: 0.3s;
+        position: relative;
+        z-index: 7;
+    }
+    header button.active span:nth-child(2) {
+        opacity: 0;
+        position: absolute;
+        left: -40px;
+        z-index: -1;
+    }
+    header button.active span:first-child {
+        transform: rotate(45deg) translate(6px, 4px);
+    }
+    header button.active span:last-child {
+        transform: rotate(-45deg) translate(3px, -2px);
+    }
+}
+
+
+/* ends header */
+
+
+/* starts 2 */
+
+.background-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    right: 0;
+    z-index: -1;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/pexels-photo-443383.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* ends background2 */
+
+
+/* starts background3 */
+
+.background-webApp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    right: 0;
+    z-index: -1;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/2.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.background-desktopApp {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    right: 0;
+    z-index: -1;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/1.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+
+/* ends background4 */
+
+
+/* starts welcome */
+
+.input {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    transition: 0.4s;
+    opacity: 0;
+}
+
+.input.active {
+    z-index: 30;
+    opacity: 1;
+}
+
+.input input {
+    height: 40px;
+    width: 200px;
+    outline: 0;
+    padding: 0 10px;
+    background-color: var(--ct);
+    color: var(--cfo);
+    border: 0;
+}
+
+.input input::placeholder {
+    color: var(--cfo);
+}
+
+.input button {
+    height: 40px;
+    width: fit-content;
+    padding: 0 20px;
+    font-size: 20px;
+    outline: 0;
+    background-color: var(--ct);
+    color: var(--cfo);
+    border: 0;
+    margin-left: 2px;
+}
+
+.welcomes {
+    color: var(--cfo) !important;
+    line-height: 1.5;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.welcomes h1 {
+    text-align: center;
+    font-size: 50px;
+    text-transform: capitalize;
+}
+
+.welcomes .book {
+    width: 328px;
+    margin: auto;
+}
+
+.welcomes .book input {
+    margin: 10px 0;
+}
+
+.welcomes .book button {
+    width: 100%;
+    padding: 11px;
+    border: 0;
+    border-radius: 5px;
+    background: #2196f3;
+    color: #fff;
+}
+
+.welcome {
+    color: var(--cfo) !important;
+    line-height: 1.5;
+    z-index: 1;
+    height: 100vh !important;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.welcome h1 {
+    margin-bottom: 20px;
+    font-size: 50px;
+    width: 500px !important;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.welcome p {
+    font-family: sans-serif !important;
+    font-size: 20px;
+    width: 500px !important;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+
+/* ends welcome */
+
+section {
+    padding: 120px 0;
+}
+
+section h1.mainLogo,
+footer h1.mainLogo {
+    text-align: center;
+    color: #fff !important;
+    width: fit-content;
+    margin: auto;
+    position: relative;
+    text-transform: capitalize;
+}
+
+section h1.mainLogo::before,
+footer h1.mainLogo::before {
+    content: "";
+    position: absolute;
+    bottom: -11px;
+    left: 50%;
+    width: 140%;
+    transform: translateX(-50%);
+    height: 3px;
+    background-color: #fff;
+}
+
+@media (max-width: 700px) {
+    .welcome h1,
+    .welcome p {
+        width: 100% !important;
+    }
+}
+
+
+/* starts Services */
+
+.Services .cart {
+    width: 350px;
+    background-color: #fff;
+    border-radius: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 20px;
+}
+
+.Services .cart .back1 {
+    height: 200px;
+    width: 100%;
+    background-image: url("../images/2.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-clip: border-box;
+    background-repeat: no-repeat;
+}
+
+.Services .cart .back2 {
+    height: 200px;
+    width: 100%;
+    background-image: url("../images/1.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-clip: border-box;
+    background-repeat: no-repeat;
+}
+
+.Services .cart .card-text {
+    padding: 20px;
+}
+
+.Services .cart .card-text h2 {
+    font-size: 30px;
+}
+
+.Services .cart .card-text p {
+    font-size: 17px;
+    color: #a09b9b;
+    text-transform: capitalize;
+}
+
+.Services .cart .card-text a {
+    background: #e91e63;
+    border: 0;
+    padding: 12px 20px;
+    border-radius: 50px;
+    color: #fff;
+    text-transform: capitalize;
+    text-decoration: none;
+    margin: 8px 0;
+    display: inline-block;
+}
+
+.Services .cart .card-text a:hover {
+    animation: btn 1s linear forwards;
+}
+
+@keyframes btn {
+    0% {
+        transform: scale(1) rotate(0);
+    }
+    25% {
+        transform: scale(1.2) rotate(10deg);
+    }
+    50% {
+        transform: scale(1) rotate(0);
+    }
+    75% {
+        transform: scale(1.2) rotate(-10deg);
+    }
+    100% {
+        transform: scale(1) rotate(0);
+    }
+}
+
+
+/* ends Services */

@@ -1,0 +1,478 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+ ::-webkit-scrollbar-track {
+    background-color: rgb(14, 13, 13);
+}
+
+ ::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 5px;
+}
+
+body {
+    background-color: #111111;
+    overflow-x: hidden;
+}
+
+a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}
+
+
+/* sss */
+
+path {
+    fill: #FFF;
+}
+
+.fill {
+    fill: #FF0000;
+}
+
+nav ul li a>img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+nav ul li a i {
+    position: relative;
+}
+
+nav ul li a i:hover::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 40px;
+    margin: 10px;
+    color: #FFF;
+    background-color: red;
+    padding: 10px;
+    left: -10px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+    width: fit-content;
+    white-space: nowrap;
+    font-family: sans-serif;
+}
+
+nav form button {
+    position: relative;
+}
+
+nav form button:hover::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 40px;
+    margin: 10px;
+    color: #FFF;
+    background-color: red;
+    padding: 10px;
+    left: -30px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+    width: fit-content;
+    white-space: nowrap;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+@media (max-width:1000px) {
+    nav ul li a i:hover::after {
+        content: attr(data-text);
+        position: absolute;
+        top: -20px;
+        margin: 10px;
+        color: #FFF;
+        background-color: red;
+        padding: 10px;
+        left: 20px;
+        text-align: center;
+        display: inline-block;
+        border-radius: 5px;
+        width: fit-content;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width:500px) {
+    nav ul li a i:hover::after {
+        content: attr(data-text);
+        position: absolute;
+        top: -20px;
+        margin: 10px;
+        color: #FFF;
+        background-color: red;
+        padding: 10px;
+        left: 20px;
+        text-align: center;
+        display: inline-block;
+        border-radius: 5px;
+        width: fit-content;
+        white-space: normal;
+    }
+}
+
+
+/* sss */
+
+
+/* sss */
+
+.body-youtube div div .coll {
+    margin: 20px 0;
+    color: #FFF;
+}
+
+.body-youtube div div div video,
+.body-youtube div div div iframe {
+    width: 100%;
+    outline: 0;
+    margin-bottom: 10px;
+}
+
+.body-youtube div div .coll[dir="rtl"] {
+    margin-top: 20px;
+    margin-left: 0 !important;
+}
+
+.body-youtube div div .coll.coll1 .child {
+    width: 109%;
+    height: 103px;
+    color: #FFF !important;
+    margin: 10px 0;
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+}
+
+.body-youtube div div .coll[dir="rtl"] .child .img {
+    height: 103px;
+    width: 180px;
+}
+
+.body-youtube div div .coll[dir="rtl"] .child:hover {
+    color: red !important;
+}
+
+.body-youtube div div .coll[dir="rtl"] .child .img img {
+    height: 100%;
+    width: 180px;
+}
+
+.body-youtube div div .coll[dir="rtl"] .child .img+div p {
+    font-size: 14px;
+    height: 43px;
+    margin-bottom: 10px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    z-index: 11;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
+}
+
+.body-youtube div div .coll[dir="rtl"] .child .img+div a {
+    font-size: 14px;
+    display: block;
+    margin-bottom: -5px;
+    color: #f00;
+}
+
+.body-youtube div div .coll[dir="rtl"] .child .img+div span {
+    font-size: 14px;
+    padding-left: 10px;
+    margin: 0 !important;
+    color: #aaa;
+}
+
+.body-youtube div div .coll[dir="rtl"] .child .img+div .dd-bl {
+    display: block;
+}
+
+
+/* vedios  */
+
+
+/* vedios  */
+
+
+/* start info-video */
+
+.info-video {
+    padding: 0 10px;
+    border-bottom: 1px solid #AAA;
+    padding-bottom: 8px;
+}
+
+.info-video .color {
+    color: #AAA !important;
+}
+
+.info-video button {
+    background-color: transparent;
+    border: 0;
+    color: #AAA !important;
+    font-size: 17px;
+}
+
+.info-video button:hover {
+    color: red !important;
+}
+
+.info-video button span {
+    font-size: 15px;
+}
+
+.info-video .d-inline-block button span {
+    margin: 0 8px;
+}
+
+.info-video .d-inline-block {
+    border-bottom: 3px solid rgb(255, 255, 255);
+    padding-bottom: 10px !important;
+    position: relative;
+    color: #AAA !important;
+}
+
+.info-video .d-inline-block::before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 10px;
+    right: 0;
+    background-color: rgb(255, 0, 0);
+    height: 3px;
+}
+
+.info-video .dangerge {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.info-video .before::after {
+    content: '';
+    display: inline-block;
+    height: 5px;
+    width: 5px;
+    position: relative;
+    top: -2px;
+    margin: 0 0 0 5px;
+    border-radius: 50%;
+    background-color: #FFF;
+}
+
+
+/* end info-video */
+
+
+/* start chanall */
+
+.info-video+.chanall {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.info-video+.chanall .you-info {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.info-video+.chanall .you-info .img1 img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.info-video+.chanall .you-info div p {
+    font-size: 17px;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+
+.info-video+.chanall .you-info div span {
+    color: #AAA;
+    font-size: 14px;
+}
+
+.info-video+.chanall button {
+    background-color: red;
+    border: 0;
+    color: #FFF;
+    height: 35px;
+    margin: 8px;
+    width: 80px;
+    font-size: 18px;
+    border-radius: 2px;
+}
+
+
+/* end chanall */
+
+
+/* start discription */
+
+.info-video+.chanall+.discription {
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.info-video+.chanall+.discription button {
+    position: absolute;
+    top: 75px;
+    z-index: 11;
+    right: 0;
+    width: 100%;
+    background-color: #111111;
+    color: #FFF;
+    text-align: end;
+    padding: 10px;
+    border: 0;
+}
+
+@media (max-width:1000px) {
+    .body-youtube div div .coll[dir="rtl"] .child .img+div p {
+        font-size: 14px;
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+        overflow: hidden;
+        position: relative;
+        z-index: 11;
+        text-overflow: ellipsis;
+        white-space: pre-wrap;
+    }
+    .body-youtube div div .coll[dir="rtl"] .child .img+div a {
+        font-size: 14px;
+        display: block;
+        margin-bottom: 0;
+    }
+    .body-youtube div div .coll[dir="rtl"] .child .img+div .dd-bl {
+        display: inline-block;
+    }
+    .info-video+.chanall {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .dangerge {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width:500px) {
+    .info-video+.chanall {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .info-video .dangerge {
+        margin-top: 20px !important;
+    }
+}
+
+@media (max-width:330px) {
+    .body-youtube div div .coll.coll1 .child {
+        width: 100%;
+        height: auto;
+        color: #FFF !important;
+        margin: 10px auto;
+        display: flex;
+        overflow: hidden;
+        flex-direction: column;
+    }
+    .body-youtube div div .coll[dir="rtl"] .child .img {
+        height: 150px;
+        width: 100%;
+    }
+    .body-youtube div div .coll[dir="rtl"] .child .img img {
+        height: 150px;
+        width: 100%;
+    }
+    .body-youtube div div .coll[dir="rtl"] .child .img+div p {
+        font-size: 14px;
+        height: auto;
+        margin-bottom: 10px;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        z-index: 11;
+        text-overflow: ellipsis;
+        white-space: pre-wrap;
+    }
+    .body-youtube div div .coll[dir="rtl"] .child .img+div a {
+        font-size: 14px;
+        display: block;
+        margin-bottom: -5px;
+        width: 100%;
+    }
+    .body-youtube div div .coll[dir="rtl"] .child .img+div span {
+        font-size: 14px;
+        padding-left: 10px;
+        margin: 0 !important;
+        color: #aaa;
+    }
+}
+
+@media (max-width:400px) {
+    .body-youtube div div .coll.coll1 .child {
+        width: 100%;
+        height: auto;
+        color: #FFF !important;
+        margin: 10px auto;
+        display: flex;
+        overflow: hidden;
+        flex-direction: column;
+    }
+    .body-youtube div div .coll[dir="rtl"] .child .img {
+        height: 180px;
+        width: 100%;
+    }
+    .body-youtube div div .coll[dir="rtl"] .child .img img {
+        height: 180px;
+        width: 100%;
+    }
+    .body-youtube div div .coll[dir="rtl"] .child .img+div p {
+        font-size: 14px;
+        height: auto;
+        margin-bottom: 10px;
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        z-index: 11;
+        text-overflow: ellipsis;
+        white-space: pre-wrap;
+    }
+    .body-youtube div div .coll[dir="rtl"] .child .img+div a {
+        font-size: 14px;
+        display: block;
+        margin-bottom: -5px;
+        width: 100%;
+    }
+    .body-youtube div div .coll[dir="rtl"] .child .img+div span {
+        font-size: 14px;
+        padding-left: 10px;
+        margin: 0 !important;
+        color: #aaa;
+    }
+}
+
+
+/* end discription */

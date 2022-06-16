@@ -1,0 +1,224 @@
+webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #FFF;
+    border-radius: 5px;
+}
+
+body {
+    background-color: #656;
+}
+
+.background {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/s.jpg") no-repeat center center/cover;
+    height: 100vh;
+}
+
+
+/* start navbar */
+
+.nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 22;
+}
+
+
+/* end navbar */
+
+
+/* start header-body */
+
+.header-body .My-info {
+    position: relative;
+    top: 200px;
+}
+
+.header-body .My-info span {
+    text-transform: capitalize;
+    color: #FFF;
+}
+
+.header-body .My-info h1 {
+    font-size: 50px;
+    color: #FFF;
+}
+
+.header-body .My-info p {
+    color: #000;
+    font-size: 20px;
+    color: #FFF;
+}
+
+.header-body .My-info button {
+    padding: 5px 10px;
+    width: 130px;
+    margin: 10px;
+    background-color: transparent;
+    border: 0;
+    transition: .5s;
+}
+
+.header-body .My-info button.first {
+    border: 2px solid #FFF;
+    border-radius: 10px;
+    color: #FFF;
+}
+
+.header-body .My-info button.first:hover {
+    background-color: rgb(255, 238, 4);
+    border-radius: 10px;
+    color: #000;
+    border: 2px solid #000;
+    border: 2px solid rgb(255, 238, 4);
+}
+
+.header-body .My-info button.last {
+    background-color: rgb(255, 238, 4);
+    border-radius: 10px;
+    color: #000;
+    border: 2px solid rgb(255, 238, 4);
+}
+
+.header-body .My-info button.last:hover {
+    border: 2px solid #FFF;
+    border-radius: 10px;
+    color: #FFF;
+    background-color: transparent;
+}
+
+@media (max-width:800px) and (min-width:777px) {
+    .header-body .My-info {
+        padding-left: 100px;
+    }
+}
+
+@media (max-width:360px) {
+    .header-body .My-info {
+        position: relative;
+        top: 200px;
+        padding-left: 0px;
+        text-align: center;
+    }
+}
+
+
+/* end header-body */
+
+
+/* start My-Skills */
+
+.My-Skills {
+    padding: 20px 0;
+}
+
+.My-Skills h2 {
+    color: #FFF;
+}
+
+.My-Skills .col-xxl {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.My-Skills .col-xxl span {
+    color: #FFF;
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: flex-start;
+    width: 10%;
+    padding: 5px 0;
+}
+
+@media (max-width:1000px) {
+    .My-Skills .col-xxl {
+        margin: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+.My-Skills .col-xxl .parent {
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.My-Skills .col-xxl .child {
+    padding: 6px;
+    color: #FFF;
+    background-color: #000;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.My-Skills .col-xxl .child.w-90 {
+    width: 90%;
+}
+
+.My-Skills .col-xxl .child.w-51 {
+    width: 51%;
+}
+
+.My-Skills .col-xxl .child.w-15 {
+    width: 15%;
+}
+
+
+/* end My-Skills */
+
+
+/* start contactus */
+
+.contact-us {
+    padding: 40px 0;
+    background-color: #FFF;
+}
+
+.contact-us span {
+    width: 100%;
+    color: #000;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.contact-us .con {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-us .con a {
+    color: #FFF;
+    text-decoration: none;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    background-color: #FFF;
+    color: #000;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    transition: .5s;
+}
+
+.contact-us .con a:hover {
+    box-shadow: 0 0 0px 3px #a5a5a5;
+}
+
+
+/* end contactus */

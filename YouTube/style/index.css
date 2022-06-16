@@ -1,0 +1,262 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+ ::-webkit-scrollbar-track {
+    background-color: rgb(14, 13, 13);
+}
+
+ ::-webkit-scrollbar-thumb {
+    background-color: #aaa;
+    border-radius: 5px;
+}
+
+body {
+    background-color: #111111;
+    overflow-x: hidden;
+}
+
+a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}
+
+
+/* sss */
+
+path {
+    fill: #FFF;
+}
+
+.fill {
+    fill: #FF0000;
+}
+
+nav ul li a>img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+nav ul li a i {
+    position: relative;
+}
+
+nav ul li a i:hover::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 40px;
+    margin: 10px;
+    color: #FFF;
+    background-color: rgb(46, 46, 46);
+    padding: 10px;
+    left: -10px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+    width: fit-content;
+    white-space: nowrap;
+    font-family: sans-serif;
+    z-index: 2222;
+}
+
+nav form button {
+    position: relative;
+}
+
+nav form button:hover::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 40px;
+    z-index: 2222;
+    margin: 10px;
+    color: #FFF;
+    background-color: rgb(46, 46, 46);
+    padding: 10px;
+    left: -30px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+    width: fit-content;
+    white-space: nowrap;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+@media (max-width:1000px) {
+    nav ul li a i:hover::after {
+        content: attr(data-text);
+        position: absolute;
+        top: -20px;
+        margin: 10px;
+        color: #FFF;
+        background-color: red;
+        padding: 10px;
+        left: 20px;
+        text-align: center;
+        display: inline-block;
+        border-radius: 5px;
+        width: fit-content;
+        white-space: nowrap;
+    }
+}
+
+@media (max-width:500px) {
+    nav ul li a i:hover::after {
+        content: attr(data-text);
+        position: absolute;
+        top: -20px;
+        margin: 10px;
+        color: #FFF;
+        background-color: red;
+        padding: 10px;
+        left: 20px;
+        text-align: center;
+        display: inline-block;
+        border-radius: 5px;
+        width: fit-content;
+        white-space: normal;
+    }
+}
+
+
+/*  start container */
+
+.container .row .child {
+    padding: 10px;
+    padding-bottom: 10px;
+}
+
+.container .row .child .img {
+    width: 100%;
+    height: 165px;
+    position: relative;
+    z-index: 2;
+}
+
+.container .row .child .img img {
+    width: 100%;
+    height: 100%;
+}
+
+.container .row .child:hover .img span {
+    display: none;
+}
+
+.container .row .child .img span {
+    background-color: rgb(255, 255, 255);
+    padding: 0 5px;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: bold;
+    position: absolute;
+    z-index: 3;
+    bottom: 5px;
+    left: 5px;
+}
+
+.container .row .child .img div {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .row .child:hover .img div button {
+    display: flex;
+}
+
+.container .row .child .img div button {
+    margin: 4px 0;
+    background-color: #000;
+    color: #FFF;
+    border: 1px solid #FFF;
+    border-radius: 2px;
+    padding: 5px;
+    align-items: center;
+    justify-content: flex-start;
+    width: fit-content;
+    display: none;
+}
+
+.container .row .child .img div button i {
+    position: relative;
+    z-index: 1;
+    color: #FFF;
+    transition: .8s;
+}
+
+.container .row .child .img div button:hover i::after {
+    opacity: 1;
+    display: inline-block;
+}
+
+.container .row .child .img div button i::after {
+    content: attr(data-text);
+    position: relative;
+    margin-left: 5px;
+    left: 0;
+    display: none;
+    z-index: -1;
+    opacity: 0;
+}
+
+.container .row .child .img+div .after::after {
+    content: '';
+    display: inline-block;
+    height: 5px;
+    width: 5px;
+    position: relative;
+    top: -2px;
+    margin: 0 5px 0;
+    border-radius: 50%;
+    background-color: #FFF;
+}
+
+.container .row .child .w {
+    width: 290px;
+}
+
+.container .row .child .img+div {
+    padding: 10px 4px;
+}
+
+.container .row .child .img+div .img-child {
+    width: 50px;
+    height: 36px;
+}
+
+.container .row .child .img+div .img-child img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.container .row .child .img+div .img-child+div {
+    margin: 0 10px;
+    direction: rtl;
+}
+
+.container .row .child .img+div .img-child+div p {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 5px;
+    color: #FFF;
+}
+
+.container .row .child .img+div .img-child+div a {
+    display: block;
+    color: red;
+}
+
+.container .row .child .img+div .img-child+div span {
+    color: #aaa;
+}
+
+
+/*  end container */

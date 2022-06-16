@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calculate your age on</title>
+    <meta name="description" content="">
+    <script src="https://kit.fontawesome.com/80bc8a1395.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style/bootstrap.css">
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body class="body1" id="bo">
+
+    <div class="loading">
+
+    </div>
+    <div class="container p-4">
+        <!-- fa-moon -->
+        <h1 class="text-center mb-2">Calculate your age <i class="fas fa-moon" id="ss"></i></h1>
+        <h2 class="text-center mb-5">Hello<span id="your$name"></span></h2>
+        <div class="row d-flex flex-column justify-content-center align-items-center">
+            <div class="col-xl-8 col-lg-10 col-md-12 col-sm-12">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">!</span>
+                    <input type="text" id="username" maxlength="30" class="w-90 form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon2">@</span>
+                    <input type="text" id="Age" class="w-90 form-control" placeholder="Your Age" aria-label="Username" aria-describedby="basic-addon1">
+
+                </div>
+            </div>
+            <div class="col-xl-8 col-lg-10 col-md-12 col-sm-12 text-center">
+                <button class="btn fs-3 btn-primary mt-3 days">days</button>
+                <button class="btn fs-3 btn-primary mt-3 hours">hours</button>
+                <button class="btn fs-3 btn-primary mt-3 minutes">minutes</button>
+                <button class="btn fs-3 btn-primary mt-3 seconds">seconds</button>
+            </div>
+            <div class="col d-flex justify-content-center mt-4">
+                <div class="age-output align-items-center bg-dark" id="output">
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/javascript.js"></script>
+</body>
+
+</html>

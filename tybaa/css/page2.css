@@ -1,0 +1,84 @@
+.lessones {
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+    margin: 10px auto;
+    padding: 10px;
+    background-color: #FFF;
+    width: 600px;
+}
+
+.lessones>div:first-child {
+    display: flex;
+    align-items: center;
+}
+
+.lessones>div:first-child p {
+    margin: 0;
+}
+
+.lessones>div:first-child p a {
+    text-decoration: none;
+    color: #4DB5E3;
+}
+
+.lessones>div:first-child span {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #4DB5E3;
+    color: #4DB5E3;
+    border-radius: 50%;
+    margin-left: 10px;
+}
+
+.lessones>div:last-child {
+    margin-top: 20px;
+}
+
+.lessones>div:last-child ul {
+    display: flex;
+    list-style: none;
+    width: 100%;
+}
+
+.lessones>div:last-child ul li {
+    width: calc(100% / 5);
+    text-align: center;
+    background-color: #ddd;
+    height: 10px;
+    margin: 0 1px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lessones>div:last-child ul li:first-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.lessones>div:last-child ul li:last-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.lessones>div:last-child ul li a {
+    border-radius: 50%;
+    display: block;
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    line-height: 34px;
+    text-decoration: none;
+    color: #FFF;
+    background: #ddd;
+}
+
+@media (max-width:650px) {
+    .lessones {
+        width: 100%;
+    }
+}

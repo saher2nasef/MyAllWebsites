@@ -1,0 +1,248 @@
+.background {
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../home-bg-m.jpg") no-repeat center center/cover;
+}
+
+body {
+    height: 100vh;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: rgb(255, 255, 255);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+
+/* start navbar */
+
+nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+
+nav .top button {
+    padding: 4px 10px !important;
+    margin: 0 20px;
+    width: 120px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    height: 100%;
+    direction: rtl;
+    padding: 0;
+}
+
+nav .bottom {
+    height: 100%;
+    display: inline-block;
+    padding: 0 20px;
+}
+
+nav ul li {
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: .4s;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+nav ul li:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+nav ul li:hover a {
+    color: rgb(0, 0, 0);
+}
+
+nav #btn {
+    display: none;
+}
+
+nav #btn span {
+    height: 4px;
+    display: block;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    margin: 4px 0;
+}
+
+@media (max-width:900px) {
+    .open {
+        right: 0 !important;
+    }
+    nav .bottom {
+        position: fixed;
+        top: 0;
+        right: -280px;
+        background-color: #000;
+        transition: .5s;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 216px;
+        padding-right: 53px;
+    }
+    nav ul li {
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
+    }
+    nav ul li a {
+        color: #FFF;
+    }
+    nav ul li:hover a {
+        color: #000;
+    }
+    nav ul li:hover {
+        background-color: #FFF;
+        color: #FFF;
+    }
+    nav #btn {
+        position: relative;
+        z-index: 1;
+        display: block;
+        width: 43px;
+        margin-top: 10px;
+        height: 40px;
+        padding: 5px;
+    }
+    nav #btn:hover span {
+        background-color: #FFF;
+        transition: .5s;
+    }
+    .active span {
+        background-color: #FFF !important;
+    }
+    .active span:first-child {
+        transform: rotate( 45deg) translate(5px, 3px);
+    }
+    .active span:nth-child(2) {
+        display: none !important;
+    }
+    .active span:last-child {
+        transform: rotate( -45deg) translate(3px, -1px);
+    }
+}
+
+
+/* end navbar */
+
+
+/* start section */
+
+section {
+    text-align: center;
+    margin: auto;
+    margin-top: 100px;
+    width: 80%;
+}
+
+section h1 {
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+section p {
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+section div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:700px) {
+    section div {
+        flex-direction: column;
+    }
+    section div button {
+        margin: 10px 0;
+    }
+}
+
+
+/* end section */
+
+
+/* start footer */
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding: 10px;
+}
+
+svg {
+    width: 40px;
+    z-index: -1;
+}
+
+svg {
+    content: '';
+    background: white;
+    border-radius: 50%;
+    z-index: 0;
+    width: 40px;
+    height: 40px;
+    top: 11px;
+    left: 6px;
+}
+
+
+/* end footer */
+
+@media (max-width:500px) {
+    section h1 {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+    section {
+        margin-top: 40px;
+    }
+    section p {
+        font-size: 18px;
+    }
+    footer .impartent {
+        flex-direction: column;
+    }
+    footer .impartent p:first-child {
+        border-bottom: 2px solid #FFF;
+        padding-bottom: 10px;
+    }
+    footer {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width:300px) {
+    section h1 {
+        font-size: 30px;
+    }
+    section {
+        width: 100%;
+    }
+}

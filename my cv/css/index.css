@@ -1,0 +1,387 @@
+::-webkit-scrollbar {
+    width: 1em !important;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3) !important;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: darkgrey !important;
+    outline: 1px solid slategrey !important;
+}
+
+:root {
+    --main-color: #000;
+    --backgound: #FFF;
+    --border: #e9e7e7;
+}
+
+a {
+    text-decoration: none;
+}
+
+.info-me h1 {
+    font-size: 50px;
+    font-weight: 900;
+    margin: 0;
+    color: var(--main-color);
+}
+
+.info-me h1+p {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--main-color);
+}
+
+.info-me .info-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.info-me .info-child div,
+.info-me .info-child a div {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin: 0 40px 20px;
+    background-color: transparent;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: .5s;
+    border: 2px solid rgb(156, 156, 156);
+}
+
+.info-me .info-child a {
+    color: #000;
+}
+
+.info-me .info-child a div {
+    border: 2px solid rgb(156, 156, 156) !important;
+}
+
+.info-me .info-child div:last-child {
+    border: 0;
+}
+
+.info-me .info-child div:last-child:hover {
+    box-shadow: 0 0 0 0;
+    background-color: transparent;
+}
+
+.info-me .info-child div:hover,
+.info-me .info-child a:hover div:hover {
+    box-shadow: 0 0 10px 2px rgb(156, 156, 156);
+    cursor: pointer;
+    background-color: #e91e63;
+}
+
+.info-me .info-child div p {
+    margin: 0;
+    font-weight: 600;
+}
+
+.info-me .info-child div i {
+    margin: 10px;
+    background-color: var(--main-color);
+    color: var(--backgound);
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.info-me .info-child div img {
+    width: 179px;
+    height: 179px;
+    border-radius: 50%;
+}
+
+
+/* ends info me */
+
+
+/* starts Social-media */
+
+.Social-media {
+    padding: 20px 0;
+    background-color: var(--border);
+}
+
+.Social-media h2 {
+    text-transform: capitalize;
+    font-weight: 900;
+    border-bottom: 2px solid #000;
+    width: fit-content;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin: 0 auto 20px;
+}
+
+.Social-media a {
+    text-decoration: none;
+}
+
+.Social-media a i {
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    color: #FFF;
+    background: #795548;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: .5s;
+    margin: 10px;
+}
+
+.Social-media a i:hover {
+    box-shadow: 0 0 18px 2px #e91e63;
+}
+
+.Social-media .Social-child {
+    width: 258px;
+    margin: auto;
+}
+
+
+/* ends Social-media */
+
+
+/* starts Profile */
+
+.Profile {
+    padding: 20px 0;
+}
+
+.Profile h2 {
+    text-transform: capitalize;
+    font-weight: 900;
+    border-bottom: 2px solid #000;
+    width: fit-content;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin: 0 auto 20px;
+}
+
+.Profile p {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 auto;
+    width: 600px;
+    text-align: center;
+}
+
+
+/* ends Profile */
+
+
+/* starts Education */
+
+.Education {
+    padding: 20px 0;
+    background-color: var(--border);
+}
+
+.Education h2 {
+    text-transform: capitalize;
+    font-weight: 900;
+    border-bottom: 2px solid #000;
+    width: fit-content;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin: 0 auto 20px;
+}
+
+.Education p {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 auto;
+    width: 400px;
+    text-align: center;
+}
+
+
+/* ends Education */
+
+
+/* starts Experience */
+
+.Experience {
+    padding: 20px 0;
+}
+
+.Experience h2 {
+    text-transform: capitalize;
+    font-weight: 900;
+    border-bottom: 2px solid #000;
+    width: fit-content;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin: 0 auto 20px;
+}
+
+.Experience p {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 auto;
+    width: 400px;
+    text-align: center;
+}
+
+.Experience .website {
+    width: 100%;
+    height: 90vh;
+    border-radius: 5px;
+    margin: 10px;
+    resize: both;
+    overflow: hidden;
+}
+
+.Experience .h3 {
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.Experience .website iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.Experience .all-my-websites {
+    height: 250px;
+    background-color: #009688;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    padding: 10px 0;
+    border-radius: 5px;
+    margin: 10px;
+    flex-wrap: wrap;
+}
+
+.Experience .all-my-websites button {
+    display: block;
+    font-size: 20px;
+    color: #FFF;
+    background-color: transparent;
+    border: 1px solid rgb(0, 255, 136);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 143px;
+}
+
+
+/* ends Experience */
+
+
+/* starts skills */
+
+.skills {
+    background-color: var(--border);
+}
+
+.skills h2 {
+    text-transform: capitalize;
+    font-weight: 900;
+    border-bottom: 2px solid #000;
+    width: fit-content;
+    padding: 10px 10px;
+    border-radius: 5px;
+    margin: 0 auto 20px;
+}
+
+.skills .progres {
+    width: 500px;
+    display: flex;
+    height: 47px;
+    flex-direction: column;
+    margin: 10px auto;
+}
+
+.skills .progres>div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills .progres .progres-child {
+    background: #e91e63;
+    height: 10px;
+    width: 100%;
+    margin: auto;
+}
+
+.skills .progres .progres-child span {
+    background-color: #ffeb3b;
+    height: 10px;
+    display: block;
+}
+
+
+/* ends skills */
+
+
+/* starts Hobbys */
+
+.Hobbys {
+    padding: 20px 0;
+}
+
+.Hobbys h2 {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.Hobbys .img {
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.Hobbys img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.Hobbys p {
+    position: absolute;
+    bottom: -40px;
+    background-color: #000;
+    color: #FFF;
+    width: 100%;
+    height: 40px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    transition: .3s;
+    text-transform: capitalize;
+}
+
+.Hobbys .img:hover p {
+    bottom: 0;
+}
+
+
+/* ends Hobbys */
+
+@media (max-width:550px) {
+    .skills .progres {
+        width: 100%;
+    }
+    .Experience p {
+        width: 100%;
+    }
+}

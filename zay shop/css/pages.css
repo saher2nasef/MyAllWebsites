@@ -1,0 +1,590 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    animation: one 2s linear forwards;
+}
+
+@keyframes one {
+    0% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+/* start about */
+
+.about {
+    padding: 200px 0 100px;
+    background-color: #59ab6e !important;
+    color: #FFF;
+}
+
+.about img {
+    width: 300px;
+    height: 300px;
+}
+
+.about h2 {
+    font-size: 40px;
+}
+
+.about p {
+    font-size: 18px;
+}
+
+
+/* end about */
+
+
+/* start services */
+
+.services h1 {
+    font-size: 43px;
+    font-weight: 100;
+    width: 331px;
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.services p {
+    width: 437px;
+    margin: auto;
+    font-size: 18px;
+    text-align: center;
+}
+
+.services .div-ourServices {
+    font-size: 55px;
+    text-align: center;
+    width: 220px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 10px;
+    flex-direction: column;
+    background-color: #FFF;
+    box-shadow: 0 0 10px 0 rgb(231, 218, 218);
+    margin: 10px;
+    transition: .3s;
+}
+
+.services .div-ourServices i {
+    color: var(--main-color);
+    transition: .3s;
+}
+
+.services .div-ourServices h4 {
+    font-size: 18px;
+}
+
+.services .div-ourServices:hover {
+    background-color: var(--main-color);
+    color: #FFF !important;
+}
+
+.services .div-ourServices:hover i {
+    color: #FFF;
+}
+
+
+/* end services */
+
+
+/* start Brands */
+
+.Brands {
+    background: #efefef;
+}
+
+.Brands h1 {
+    font-size: 43px;
+    font-weight: 100;
+    width: 331px;
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.Brands p {
+    width: 437px;
+    margin: auto;
+    font-size: 18px;
+    text-align: center;
+}
+
+.Brands .my-slider {
+    width: 600px;
+    height: 80px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden !important;
+}
+
+.Brands .my-slider1 {
+    position: relative;
+    width: 600px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.Brands .my-slider1 button {
+    position: absolute;
+    background-color: transparent;
+    color: #000;
+    border: 0;
+    outline: 0;
+    font-size: 25px;
+}
+
+.Brands .my-slider1 button#left {
+    left: -50px;
+}
+
+.Brands .my-slider1 button#right {
+    right: -50px;
+}
+
+.Brands .my-slider img {
+    width: 85px;
+    height: 50px;
+    opacity: .4;
+    margin: 33px;
+    position: relative;
+    transition: .3s;
+}
+
+.Brands .my-slider img:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.Brands .my-slider img:first-child {
+    margin-left: 20px;
+}
+
+.action {
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    left: 10px;
+    transition: .7s;
+}
+
+.action .width {
+    display: none;
+}
+
+.action .width.active {
+    display: flex;
+}
+
+
+/* end Brands */
+
+
+/* start shop */
+
+.shop {
+    margin-top: 70px;
+}
+
+.shop>div>div>div>ul {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-top: 20px;
+    transition: 1s;
+}
+
+.shop>div>div>div>ul li {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.shop>div>div>div>ul .li {
+    height: 30px;
+    overflow: hidden;
+    transition: height .6s;
+}
+
+.shop>div>div>div>ul li.active {
+    height: auto !important;
+    transition: 1s;
+}
+
+.shop>div>div>div>ul li span {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.shop>div>div>div>ul li ul {
+    width: 100%;
+    padding: 0;
+    transition: 1s;
+}
+
+.shop>div>div>div>ul li ul li {
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 5px 0;
+    text-transform: capitalize;
+    transition: 1s;
+}
+
+.shop .header {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.shop .header ul {
+    display: flex;
+    list-style: none;
+}
+
+.shop .header ul li {
+    margin: 0 10px;
+}
+
+.shop .header ul li a {
+    color: #000 !important;
+    font-size: 20px;
+    transition: .3s;
+}
+
+.shop .header ul li a:hover {
+    color: var(--main-color) !important;
+}
+
+.shop .header select {
+    width: 300px;
+    height: 35px;
+    padding: 0 10px;
+    outline: 0;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+}
+
+.card-small {
+    width: 210px;
+    margin: 10px;
+    position: relative;
+    box-shadow: 0 0 10px 0 rgb(231, 218, 218);
+}
+
+.card-small .img {
+    width: 100%;
+    height: 280px;
+    transition: .5s;
+    overflow: hidden;
+}
+
+.card-small img {
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+}
+
+.card-small .img .top {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 290px;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: .3s;
+}
+
+.card-small:hover .img .top {
+    opacity: 1 !important;
+}
+
+.card-small:hover .img {
+    background-color: #000;
+}
+
+.card-small:hover .img img {
+    opacity: .5;
+    transform: scale(1.4) rotate(-10deg);
+}
+
+.card-small .img .top a {
+    background-color: var(--main-color);
+    padding: 10px 15px;
+    margin: 10px;
+    color: #FFF;
+    border-radius: 5px;
+}
+
+.card-small .img .top a:hover {
+    color: #FFF !important;
+}
+
+.card-small .card-text {
+    width: 100%;
+    padding: 10px;
+}
+
+.card-small .card-text p {
+    margin: 0;
+    font-size: 20px;
+}
+
+.card-small .card-text .first-div {
+    margin-bottom: 5px;
+}
+
+.card-small .card-text .first-div span {
+    font-size: 19px;
+    font-weight: 100;
+}
+
+.card-small .card-text .last-div i {
+    color: #AAA;
+}
+
+.card-small .card-text .last-div i.active {
+    color: #ede861 !important;
+}
+
+.card-small .card-text .last-div span {
+    display: block;
+    font-size: 20px;
+}
+
+.shop .buttons button {
+    background-color: #EEE;
+    color: rgb(0, 0, 0);
+    padding: 20px 25px;
+    border: 0;
+    font-size: 20px;
+    transition: .5s;
+}
+
+.shop .buttons button.active {
+    background-color: var(--main-color);
+    color: #FFF;
+}
+
+.shop .buttons button:hover {
+    background-color: var(--main-color);
+    color: #FFF;
+}
+
+
+/* end shop */
+
+
+/* start contact-us */
+
+.contact-us {
+    margin-top: 30px;
+}
+
+.backgound {
+    background-color: #e9eef5 !important;
+    padding: 30px 0;
+}
+
+.contact-us h1 {
+    font-size: 43px;
+    font-weight: 100;
+    width: 331px;
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.contact-us p {
+    width: 437px;
+    margin: auto;
+    font-size: 18px;
+    text-align: center;
+}
+
+.contact-us form {
+    width: 700px;
+    margin: auto;
+}
+
+.contact-us form label {
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+.contact-us form textarea {
+    height: 200px;
+}
+
+.contact-us form button {
+    background-color: var(--main-color);
+    color: #FFF;
+    font-size: 20px;
+    margin-left: auto;
+    display: block;
+}
+
+
+/* start Active-Wear */
+
+.body-1 {
+    background-color: #e9eef5 !important;
+}
+
+.Active-Wear {
+    margin-top: 150px;
+}
+
+.Active-Wear>div>div>div+div {
+    padding: 10px 20px;
+    background-color: #FFF;
+    box-shadow: 0 0 10px 0 rgb(231, 218, 218);
+}
+
+.Active-Wear .img-big {
+    background-color: red;
+}
+
+.Active-Wear .img-big img {
+    width: 100%;
+}
+
+.Active-Wear>div>div>div+div i {
+    color: #AAA;
+}
+
+.Active-Wear>div>div>div+div i.active {
+    color: #ede861 !important;
+}
+
+.Active-Wear>div>div>div+div .one {
+    margin-bottom: 20px;
+}
+
+.Active-Wear>div>div>div+div .one h2 {
+    font-weight: 300;
+}
+
+.Active-Wear>div>div>div+div .one span {
+    font-size: 20px;
+}
+
+.Active-Wear>div>div>div+div .tow {
+    font-size: 20px;
+}
+
+.Active-Wear>div>div>div+div .three .brand {
+    font-size: 19px;
+}
+
+.Active-Wear>div>div>div+div .three .blod {
+    font-weight: 500;
+    font-size: 19px;
+}
+
+.Active-Wear>div>div>div+div .three .brand .brand-child+span {
+    opacity: .4;
+    font-weight: 500;
+}
+
+.Active-Wear>div>div>div+div .four .output {
+    width: 30px;
+    height: 30px;
+    background-color: #6c757d!important;
+    margin: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.Active-Wear>div>div>div+div .four span {
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.Active-Wear>div>div>div+div .four .button2 {
+    background-color: var(--main-color);
+    color: #FFF !important;
+    font-size: 18px;
+    border: 0;
+    outline: 0;
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+
+.Active-Wear>div>div>div+div .four .button2 i {
+    color: #FFF;
+}
+
+.Active-Wear>div>div>div+div .four .btn-1 {
+    width: 47%;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.Active-Wear>div>div>div+div .four .btn-1:hover {
+    color: #FFF;
+}
+
+.Active-Wear>div>div>div+div .four .btn-1:first-child {
+    margin-right: 30px;
+}
+
+
+/* end Active-Wear */
+
+
+/* end contact-us */
+
+@media (max-width:700px) {
+    .Brands .my-slider1 {
+        width: 300px;
+    }
+}
+
+@media (max-width:500px) {
+    .Brands .my-slider1 {
+        width: 150px;
+    }
+    .services h1,
+    .services p,
+    .Brands h1,
+    .Brands p {
+        width: 100%;
+    }
+    .Brands .my-slider1 {
+        width: 150px;
+    }
+}
