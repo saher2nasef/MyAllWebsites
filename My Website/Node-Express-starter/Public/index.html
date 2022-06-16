@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin-top: 20px;
+        background: #f3f3f3;
+      }
+
+      img.img-fluid.mb20 {
+        width: 100%;
+      }
+
+      .vtimeline-content {
+        width: 100%;
+        background: #fff;
+        border: 1px solid #e6e6e6;
+        padding: 35px 20px;
+        border-radius: 3px;
+        text-align: left;
+
+        -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2),
+          0 6px 10px 0 rgba(0, 0, 0, 0.3);
+        box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2),
+          0 6px 10px 0 rgba(0, 0, 0, 0.3);
+      }
+
+      .vtimeline-content h3 {
+        font-size: 1.5em;
+        font-weight: 600;
+        display: inline-block;
+        margin: 0;
+      }
+
+      .vtimeline-content p {
+        font-size: 0.9em;
+        margin: 0;
+      }
+
+      .vtimeline-point {
+        position: relative;
+        display: block;
+        vertical-align: top;
+        margin: 0 auto 30px;
+        width: 600px;
+      }
+
+      .vtimeline-icon {
+        position: relative;
+        color: #fff;
+        width: 50px;
+        height: 50px;
+        background: #4782d3;
+        border-radius: 50%;
+        float: left;
+        text-align: center;
+        line-height: 50px;
+        z-index: 99;
+        margin-left: 280px;
+      }
+
+      .vtimeline-icon i {
+        display: block;
+        font-size: 1.5em;
+        line-height: 50px;
+      }
+
+      .vtimeline-date {
+        width: 260px;
+        text-align: right;
+        position: absolute;
+        left: 0;
+        top: 10px;
+        font-weight: 400;
+        color: #374054;
+      }
+      .post-meta {
+        padding-top: 15px;
+        margin-bottom: 20px;
+      }
+      .post-meta li:not(:last-child) {
+        margin-right: 10px;
+      }
+      h3 {
+        font-family: 'Montserrat', sans-serif;
+        color: #252525;
+        font-weight: 700;
+        font-variant-ligatures: common-ligatures;
+        margin-top: 0;
+        letter-spacing: -0.2px;
+        line-height: 1.3;
+      }
+      .mb20 {
+        margin-bottom: 20px !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <input type="text" id="Title" placeholder="Title" />
+      <input type="text" id="Body" placeholder="Body" />
+      <input type="text" id="Img_Url" placeholder="Img Url" />
+      <button onclick="Senddata()">Senddata</button>
+      <div id="allposts"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+
+    <script>
+      let Posts = document.getElementById('allposts')
+      let Title = document.getElementById('Title')
+      let Body = document.getElementById('Body')
+      let Img_Url = document.getElementById('Img_Url')
+      function Senddata () {
+        axios
+          .post('http://localhost:3000/posts', {
+            title: Title.value,
+            body: Body.value,
+            ImgSrc: Img_Url.value
+          })
+          .then(function (response) {
+            console.log(response)
+          })
+      }
+      axios.get('http://localhost:3000/posts').then(function (response) {
+        Posts.innerHTML = ''
+        for (let i = 0; i < response.data.length; i++) {
+          console.log(response.data[i].ImgSrc)
+          Posts.innerHTML += `
+                      <div class="vtimeline-point">
+                        <div class="vtimeline-block">
+                          <div class="vtimeline-content">
+                            <a href="#"
+                              ><img
+                                src="${response.data[i].ImgSrc}"
+                                height="400"
+                                alt=""
+                                class="img-fluid mb20"
+                            /></a>
+                            <a href="#"><h3>${response.data[i].title}</h3></a>
+                            <ul class="post-meta list-inline">
+                              <li class="list-inline-item">
+                                <i class="fa fa-user-circle-o"></i> <a href="#">John Doe</a>
+                              </li>
+                              <li class="list-inline-item">
+                                <i class="fa fa-calendar-o"></i> <a href="#">25 June 2020</a>
+                              </li>
+                              <li class="list-inline-item">
+                                <i class="fa fa-tags"></i> <a href="#">Bootstrap4</a>
+                              </li>
+                            </ul>
+                            <p>
+                              ${response.data[i].body}
+                            </p>
+                            <br />
+                            <a href="#" class="btn btn-outline-secondary btn-sm">Read More</a>
+                          </div>
+                        </div>
+                      </div>
+                      `
+        }
+      })
+    </script>
+  </body>
+</html>
